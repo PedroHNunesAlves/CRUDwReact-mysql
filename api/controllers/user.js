@@ -11,9 +11,9 @@ export const getUsers = (_, res) => {
 };
 
 export const addUser = (req, res) => {
-  const q = "INSERT INTO usuarios(nome, email, telefone, dataNasc, cidade, estado) VALUES(?)";
+  const q = "INSERT INTO usuarios(nome, email, telefone, dataNasc, cidade, estado, id) VALUES(?)";
 
-  const values = [req.body.nome, req.body.email, req.body.telefone, req.body.dataNasc, req.body.cidade, req.body.estado];
+  const values = [req.body.nome, req.body.email, req.body.telefone, req.body.dataNasc, req.body.cidade, req.body.estado, req.body.id];
 
   db.query(q, [values], (err) => {
     if (err) {

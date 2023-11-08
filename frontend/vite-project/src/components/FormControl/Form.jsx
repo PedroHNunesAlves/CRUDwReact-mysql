@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
 
 const Form = ({ getUsers, edit, setEdit }) => {
   const ref = useRef();
@@ -7,7 +8,6 @@ const Form = ({ getUsers, edit, setEdit }) => {
   useEffect(() => {
     if (edit) {
       const user = ref.current;
-
       user.nome.value = edit.nome;
       user.email.value = edit.email;
       user.telefone.value = edit.telefone;
@@ -43,6 +43,7 @@ const Form = ({ getUsers, edit, setEdit }) => {
         dataNasc: user.dataNasc.value,
         cidade: user.cidade.value,
         estado: user.estado.value,
+        id: uuidv4(),
       });
     }
 
