@@ -1,2 +1,2 @@
 ﻿# CRUDwReact-mysql
-another exercise creating a crud system using react and mysql db
+another exercise creating a crud system using react, mysql db based on uuid
